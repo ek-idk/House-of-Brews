@@ -1,0 +1,153 @@
+/* Base Styles */
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  color: white;
+  background: url('background.jpg') no-repeat center center/cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Text Section - Desktop */
+.text-section {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+  margin-right: 300px; /* spacing from phone */
+}
+
+.text-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.text-section ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.text-section li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.text-section button {
+  align-self: flex-start;
+}
+
+/* Button Styles */
+button.btn-warning {
+  background-color: #FFA500;
+  color: black;
+  border-radius: 10px;
+}
+
+button.btn-warning:hover {
+  background-color: #FFD700;
+}
+
+/* iPhone mockup */
+.iphone {
+  position: relative;
+  width: 250px;
+  height: 520px;
+  background: linear-gradient(145deg, #1a1a1a, #000);
+  border-radius: 60px;
+  padding: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  border: 4px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 70%);
+  pointer-events: none;
+}
+
+/* Logo */
+.logo {
+  width: 60px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  display: block;
+}
+
+/* Mobile Logo */
+.logo-mobile {
+  width: 100px;
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  /* desktop layout hidden, mobile layout shown automatically via Bootstrap classes */
+}
+
+@media (max-width: 576px) {
+  .logo-mobile {
+    width: 80px;
+  }
+
+  button.btn-warning {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+}
+/* Top Page Title */
+.page-title {
+  width: 100%;
+  position: fixed; /* stays at the top */
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.page-title h2 {
+  color: white;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: bold;
+}
