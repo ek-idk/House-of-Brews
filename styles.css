@@ -151,3 +151,30 @@ button.btn-warning:hover {
   margin: 0;
   font-weight: bold;
 }
+  /* Make modal fit image width */
+  .modal-dialog {
+    max-width: fit-content;
+    margin: 1.75rem auto;
+  }
+
+  /* Remove extra padding and center image */
+  .modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-body {
+    padding: 0;
+    text-align: center;
+  }
+
+  .modal-body img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
